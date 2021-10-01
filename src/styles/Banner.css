@@ -1,0 +1,19 @@
+.banner {
+    height: 450px;
+    position: relative;
+    color: #fff;
+    object-fit: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://acf.geeknetic.es/imgri/imagenes/noticias/2020/18310-netflix-av1-codec-muestra.jpg?f=webp');
+}
+
+.banner__content {
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 190px;
+}
+
+.banner__title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
