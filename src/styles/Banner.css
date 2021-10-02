@@ -1,19 +1,58 @@
 .banner {
-    height: 450px;
-    position: relative;
-    color: #fff;
-    object-fit: cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://acf.geeknetic.es/imgri/imagenes/noticias/2020/18310-netflix-av1-codec-muestra.jpg?f=webp');
+	height: 450px;
+	position: relative;
+	color: #fff;
+	object-fit: cover;
 }
 
 .banner__content {
-    margin-left: 30px;
-    padding-top: 140px;
-    height: 190px;
+	margin-left: 30px;
+	padding-top: 140px;
+	height: 190px;
 }
 
 .banner__title {
-    font-size: 3rem;
-    font-weight: 800;
-    padding-bottom: 0.3rem;
+	font-size: 3rem;
+	font-weight: 800;
+	padding-bottom: 0.3rem;
+}
+
+.banner__description {
+	width: 45rem;
+	line-height: 1.3;
+	padding-top: 1rem;
+	font-size: 0.8rem;
+	max-width: 360px;
+	height: 80px;
+}
+
+.banner-fade-bottom {
+	height: 7.4rem;
+	background-image: linear-gradient(
+		180deg,
+		transparent,
+		rgba(37, 37, 37, 0.61),
+		#111
+	);
+}
+
+.banner__button {
+	cursor: pointer;
+	color: #fff;
+	outline: none;
+	border: none;
+	font-weight: 700;
+	border-radius: 0.2vw;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background-color: rgba(51, 51, 51, 0.9);
+}
+
+.banner__button:hover {
+	color: #000;
+	background-color: #e6e6e6;
+	transition: all 0.4s;
 }
