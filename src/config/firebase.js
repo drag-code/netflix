@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -13,7 +14,11 @@ const firebaseConfig = {
 	storageBucket: "netflix-244c6.appspot.com",
 	messagingSenderId: "91515089096",
 	appId: "1:91515089096:web:2ec840bbefc8941024b5fd",
-	measurementId: "G-TB1H76ETDT",
-};
+	measurementId: "G-TB1H76ETDT"
+  };
 
-export default firebaseConfig;
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
+const auth = getAuth(firebaseApp);
+export { auth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword };
+export default db;
