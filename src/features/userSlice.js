@@ -28,7 +28,7 @@ export const userSlice = createSlice({
       state.user = action.payload;
     },
     logout: (state) => {
-      state = initialState;
+      state.user = null;
     },
   }
   // The `extraReducers` field lets the slice handle actions defined elsewhere,

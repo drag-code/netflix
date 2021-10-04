@@ -1,0 +1,75 @@
+.profilePage {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+}
+
+.profilePage__body {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 8%;
+    max-width: 800px;
+}
+
+.profilePage__avatar {
+    width: 60px;
+    height: 60px;
+}
+
+.profilePage__info {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.profilePage__accountDetails {
+    flex: 1;
+}
+
+.profilePage__accountDetailsEmail {
+    padding: 10px;
+    background-color: gray;
+    margin-bottom: 10px;
+}
+
+.divider {
+    margin-bottom: 10px;
+}
+
+.profilePage__accountDetailsPlans {
+    color: gray;
+    list-style: none;
+    padding: 0 1em;   
+}
+
+.profilePage__accountDetailsPlanItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.profilePage__signOutButton {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    outline-width: 0;
+    border: none;
+    background-color: #e50913;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.profilePage__subscribeButton {
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 6px;
+    outline-width: 0;
+    border: none;
+    background-color: #e50913;
+    cursor: pointer;
+}

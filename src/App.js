@@ -19,11 +19,11 @@ function App() {
 					email: user.email
 				}));
 			} else {
-				dispatch(logout);
+				dispatch(logout());
 			}
 		});
 		return unsubscribe;
-	}, []);
+	}, [dispatch]);
 	return (
 		<div className="app">
 			<Router>
