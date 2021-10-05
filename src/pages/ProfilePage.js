@@ -11,7 +11,7 @@ const ProfilePage = () => {
 	const subscription = useSelector(selectSubscription);
 	return (
 		<div className="profilePage">
-			<Navbar />
+			<Navbar subscription={subscription}/>
 			<div className="profilePage__body">
 				<h1>Edit Profile</h1>
 				<hr />
