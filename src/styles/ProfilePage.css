@@ -14,8 +14,7 @@
 }
 
 .profilePage__avatar {
-    width: 60px;
-    height: 60px;
+    height: 100px;
 }
 
 .profilePage__info {
@@ -51,7 +50,6 @@
 }
 
 .profilePage__signOutButton {
-    display: block;
     width: 100%;
     color: #fff;
     font-size: 1rem;
@@ -72,4 +70,8 @@
     border: none;
     background-color: #e50913;
     cursor: pointer;
+}
+
+.profilePage__subscribedButton {
+    background-color: gray;
 }

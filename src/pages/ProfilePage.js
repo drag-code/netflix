@@ -1,12 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { selectSubscription, selectUser } from "../features/userSlice";
 import Navbar from "../components/Navbar";
-import { selectUser } from "../features/userSlice";
+import PlansList from "../components/PlansList";
 import "../styles/ProfilePage.css";
 import { auth, signOut } from "../config/firebase";
 
 const ProfilePage = () => {
 	const state = useSelector(selectUser);
+	const subscription = useSelector(selectSubscription);
 	return (
 		<div className="profilePage">
 			<Navbar />
@@ -21,24 +23,17 @@ const ProfilePage = () => {
 					/>
 					<div className="profilePage__accountDetails">
 						<h4 className="profilePage__accountDetailsEmail">{state.email}</h4>
-						<h4>Plans (Current plan: premium)</h4>
-						<hr className="divider"/>
-						<p>Renewal date: 04/03/2021</p>
-						<ul className="profilePage__accountDetailsPlans">
-							<li className="profilePage__accountDetailsPlanItem">
-								<h5>Plan Standard <br/> hello</h5>
-								<button className="profilePage__subscribeButton">Subscribe</button>
-							</li>
-							<li className="profilePage__accountDetailsPlanItem">
-								<h5>Plan Standard <br/> hello</h5>
-								<button className="profilePage__subscribeButton">Subscribe</button>
-							</li>
-							<li className="profilePage__accountDetailsPlanItem">
-								<h5>Plan Standard <br/> hello</h5>
-								<button className="profilePage__subscribeButton">Subscribe</button>
-							</li>
-						</ul>
-						<button className="profilePage__signOutButton" onClick={() => signOut(auth)}>Sign Out</button>
+						<h4>
+							Plans{" "}
+							{subscription?.name && `(Current plan: ${subscription?.name})`}
+						</h4>
+						<hr className="divider" />
+						<PlansList />
+						<button
+							className="profilePage__signOutButton"
+							onClick={() => signOut(auth)}>
+							Sign Out
+						</button>
 					</div>
 				</div>
 			</div>
